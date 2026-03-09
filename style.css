@@ -703,12 +703,7 @@ textarea::placeholder {
 .map-container {
     margin-top: 2rem;
     width: 100%;
-    filter: grayscale(100%);
     transition: var(--transition);
-}
-
-.map-container:hover {
-    filter: grayscale(0%);
 }
 
 .map-container iframe {
