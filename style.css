@@ -755,12 +755,15 @@ textarea::placeholder {
 .footer-brand .logo {
     color: white;
     margin-bottom: 1.5rem;
+    justify-content: center;
 }
 
 .footer-brand p {
     max-width: 350px;
     opacity: 0.6;
     line-height: 1.6;
+    margin: 0 auto 1.5rem;
+    text-align: center;
 }
 
 .footer-links h4,
@@ -1052,6 +1055,7 @@ textarea::placeholder {
         gap: 3rem;
         text-align: center;
     }
+
 
     .footer-brand p {
         margin: 0 auto 1.5rem;
