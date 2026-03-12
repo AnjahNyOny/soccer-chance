@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://soccerinterculturelbellechasse.com/sitemap.xml
