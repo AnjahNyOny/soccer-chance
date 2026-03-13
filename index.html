@@ -36,8 +36,49 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="canonical" href="https://soccerinterculturelbellechasse.com/">
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <!-- Font Awesome (Deferred for performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "Soccer Interculturel Bellechasse",
+      "image": "https://soccerinterculturelbellechasse.com/img/soccer-banner.webp",
+      "@id": "https://soccerinterculturelbellechasse.com/",
+      "url": "https://soccerinterculturelbellechasse.com/",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Saint-Anselme",
+        "addressRegion": "QC",
+        "postalCode": "G0R2N0",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.626,
+        "longitude": -70.970
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/soccerbellechasse",
+        "https://www.instagram.com/soccerbellechasse"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -46,7 +87,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="logo">Soccer Interculturel <span class="logo-accent">Bellechasse</span></div>
-        <div class="burger" id="burger">
+        <div class="burger" id="burger" role="button" aria-label="Menu de navigation" aria-expanded="false" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
@@ -55,17 +96,20 @@
             <li><a href="#hero">Accueil</a></li>
             <li><a href="#histoire">Notre Histoire</a></li>
             <li><a href="#evenements">Événements</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#partners">Partenaires</a></li>
             <li><a href="#programme">Programmes</a></li>
             <li><a href="#contact">Nous contacter</a></li>
             <li class="mobile-socials">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Facebook du club"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram du club"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="X (Twitter) du club"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
         </ul>
     </nav>
 
     <!-- Section Hero (Split Layout) -->
+    <main>
     <section id="hero" class="hero-split">
         <div class="hero-left">
             <span class="hero-subtitle">Soccer Interculturel Bellechasse</span>
@@ -78,7 +122,7 @@
         </div>
         <div class="hero-right">
             <div class="hero-image-wrapper">
-                <img src="./img/soccer-banner.webp" alt="L'équipe Soccer Interculturel Bellechasse">
+                <img src="./img/soccer-banner.webp" alt="L'équipe Soccer Interculturel Bellechasse en action" width="1200" height="750" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -88,27 +132,26 @@
         <div class="story-grid">
             <div class="story-left">
                 <div class="story-img-wrapper">
-                    <img src="./img/club_history.png" alt="Histoire du Club">
-                    <div class="since-badge">Depuis 2020</div>
+                    <img src="./img/gallery/45e960e2-4ab8-45d5-bc19-37036da41a76.webp" alt="Notre équipe sur le terrain" width="600" height="400" loading="lazy">
+                    <div class="founder-card">
+                        <img src="./img/fondateur.webp" alt="Chance Munguakonkwa Biragi" class="founder-img" width="150" height="150" loading="lazy">
+                        <div class="founder-info">
+                            <span class="founder-name">Chance M. Biragi</span>
+                            <span class="founder-title">Fondateur</span>
+                        </div>
+                    </div>
+                    <div class="since-badge">Depuis 2019</div>
                 </div>
             </div>
             <div class="story-right">
-                <span class="section-subtitle">Héritage & Valeurs</span>
-                <h2 class="serif">Plus qu'un club, une famille</h2>
+                <span class="section-subtitle">Notre Histoire</span>
+                <h2 class="serif">L'Union par le Sport</h2>
                 <div class="story-text">
-                    <p>Le Soccer Interculturel Bellechasse est né d'une volonté simple : réunir des amis d'enfance
-                        autour de leur
-                        passion
-                        commune pour le ballon rond. Ce qui n'était au départ que des rencontres informelles le dimanche
-                        après-midi
-                        s'est rapidement transformé en un club structuré, animé par les valeurs de respect, de
-                        dépassement
-                        de soi et de fraternité.</p>
-                    <p>Aujourd'hui, nous portons haut les couleurs de Saint-Anselme lors de matchs d'exhibition à
-                        travers la
-                        région. Notre engagement reste le même : pratiquer un football de qualité dans un esprit de
-                        franche
-                        camaraderie, où chaque membre trouve sa place sur et en dehors du terrain.</p>
+                    <p><strong>Soccer Interculturel Bellechasse</strong> est une initiative fondée en 2019 par <strong>Chance Munguakonkwa Biragi</strong>. Après avoir terminé ses études dans la région du Bas‑Saint‑Laurent, il s’est installé dans la région de Bellechasse, où il a rapidement constaté un besoin essentiel : créer une structure permettant aux personnes de toutes origines de se rassembler autour du soccer, été comme hiver.</p>
+                    
+                    <p>Basé à <strong>Saint-Anselme</strong>, au cœur de la MRC de Bellechasse dans la région de <strong>Chaudière-Appalaches</strong>, l’objectif était vital : offrir aux résidents de <strong>Saint-Henri</strong>, <strong>Sainte-Claire</strong>, <strong>Honfleur</strong> et aux nouveaux arrivants un espace inclusif où chacun peut jouer, tisser des liens et se sentir pleinement accueilli dans la communauté.</p>
+
+                    <p>Aujourd’hui, l’initiative rassemble des participants de nombreuses nationalités, faisant du club un véritable carrefour interculturel. Les activités se tiennent généralement les samedis, offrant un moment de détente et de solidarité profonde entre les cultures de notre belle région.</p>
                 </div>
 
                 <div class="highlights-grid">
@@ -135,60 +178,93 @@
         <div class="events-grid">
             <div class="event-card">
                 <div class="event-img">
-                    <img src="./img/winter_training.png" alt="Entraînement Hivernal">
+                    <img src="./img/evenement/IMG_1171.webp" alt="Entraînement au gymnase" width="400" height="267" loading="lazy">
                     <div class="event-overlay">
                         <div class="event-meta">
-                            <span class="event-tag">Hiver</span>
-                            <span class="event-date">Jan - Mars</span>
+                            <span class="event-tag">Intérieur</span>
+                            <span class="event-date">Hiver</span>
                         </div>
-                        <h3 class="serif">Entraînement Hivernal</h3>
-                        <p>Préparation intensive en salle et sur terrain synthétique pour maintenir la forme même sous
-                            la neige.</p>
+                        <h3 class="serif">Pratique en salle</h3>
+                        <p>Nos séances d'entraînement intensives au gymnase pour garder le rythme durant la saison froide.</p>
                     </div>
                 </div>
             </div>
             <div class="event-card">
                 <div class="event-img">
-                    <img src="./img/summer_tournament.png" alt="Tournoi d'Été">
+                    <img src="./img/evenement/IMG_0566.webp" alt="Tournoi local" width="400" height="267" loading="lazy">
                     <div class="event-overlay">
                         <div class="event-meta">
                             <span class="event-tag">Compétition</span>
-                            <span class="event-date">Juillet</span>
+                            <span class="event-date">Été</span>
                         </div>
-                        <h3 class="serif">Tournoi Inter-Cités</h3>
-                        <p>Notre grand rendez-vous estival rassemblant les meilleures équipes de la région pour un
-                            weekend de football pur.</p>
+                        <h3 class="serif">Matchs de Championnat</h3>
+                        <p>L'adrénaline de la compétition sur les terrains de Saint-Anselme face aux meilleures équipes locales.</p>
                     </div>
                 </div>
             </div>
             <div class="event-card">
                 <div class="event-img">
-                    <img src="./img/charity_match.png" alt="Match Caritatif">
+                    <img src="./img/evenement/IMG_3381.webp" alt="Esprit d'équipe" width="400" height="267" loading="lazy">
                     <div class="event-overlay">
                         <div class="event-meta">
-                            <span class="event-tag">Social</span>
-                            <span class="event-date">Septembre</span>
+                            <span class="event-tag">Camaraderie</span>
+                            <span class="event-date">Toute l'année</span>
                         </div>
-                        <h3 class="serif">Kickoff pour la Cause</h3>
-                        <p>Un match solidaire dont tous les bénéfices sont reversés aux associations locales de
-                            Saint-Anselme.</p>
+                        <h3 class="serif">Force du Collectif</h3>
+                        <p>Bien plus que du sport, c'est une histoire d'amitié qui se forge à chaque rencontre sur le terrain.</p>
                     </div>
                 </div>
             </div>
             <div class="event-card">
                 <div class="event-img">
-                    <img src="./img/gala_evening.png" alt="Soirée de Gala">
+                    <img src="./img/evenement/CENU7380.webp" alt="Match amical en extérieur" width="400" height="267" loading="lazy">
                     <div class="event-overlay">
                         <div class="event-meta">
-                            <span class="event-tag">Prestige</span>
-                            <span class="event-date">Décembre</span>
+                            <span class="event-tag">Dépassement</span>
+                            <span class="event-date">Saison Régulière</span>
                         </div>
-                        <h3 class="serif">Gala de Fin de Saison</h3>
-                        <p>Une soirée élégante pour célébrer nos réussites, remettre les trophées et remercier nos
-                            partenaires.</p>
+                        <h3 class="serif">Passion Extérieure</h3>
+                        <p>Le plaisir de jouer sous le soleil et de performer ensemble pour les couleurs de Bellechasse.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-header">
+            <span class="section-subtitle center">Instantanés</span>
+            <h2 class="section-title serif">Galerie du Club</h2>
+            <p class="section-description">Capturer l'effort, la joie et l'esprit de Bellechasse.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item h-2"><img src="./img/gallery/0b6fb5a9-b2ce-467c-ac08-a2fc817dd7a1.webp" alt="Match de soccer interculturel à Saint-Anselme" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Match</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/1fc47567-1453-4ff3-aaf1-86cd37136ecd.webp" alt="Entraînement de l'équipe de soccer Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Action</span></div></div>
+            <div class="gallery-item w-2"><img src="./img/gallery/426d890b-8c56-45ad-9034-871e848bd864.webp" alt="Joueurs de soccer de Bellechasse en action" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Équipe</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/45e960e2-4ab8-45d5-bc19-37036da41a76.webp" alt="Passion du football à Saint-Anselme" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Émotion</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/46f2fcf9-38fb-450a-8e42-c47317b5b05e.webp" alt="Pratique sportive communautaire Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Passion</span></div></div>
+            <div class="gallery-item h-2"><img src="./img/gallery/47f84c73-db81-4823-becb-52474549d845.webp" alt="Célébration d'un but au soccer interculturel" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Victoire</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/4f0633da-048f-4e49-8b46-badae4e843ea.webp" alt="Le plaisir du jeu au soccer community" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Jeu</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/58144cb7-d05e-4837-9833-aa53d5fe0f05.webp" alt="Performance athlétique terrain soccer" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Performance</span></div></div>
+            <div class="gallery-item w-2"><img src="./img/gallery/5d7662b7-4e32-40d9-a316-49225b1ad2c4.webp" alt="Membres du club Soccer Interculturel Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Groupe</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/7063dcb4-56ab-4e26-a5d3-f99fdbbd0172.webp" alt="Esprit d'équipe et fair-play football" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Esprit</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/74788ba2-ace6-460d-bb1b-3c7628d03afb.webp" alt="Terrain de soccer municipal Saint-Anselme" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Terrain</span></div></div>
+            <div class="gallery-item h-2"><img src="./img/gallery/7527e946-b3e9-432a-bc88-f26399d679d0.webp" alt="Liens sociaux à travers le football" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Amitié</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/7e7102cb-caf0-4e01-8063-833df3dc09fc.webp" alt="Vie de club Soccer Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Club</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/82bae181-846e-4456-93ce-8d65e71c0dae.webp" alt="Match amical seniors soccer" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Match</span></div></div>
+            <div class="gallery-item w-2"><img src="./img/gallery/87d85115-045d-47dd-ac6e-8451c7c8080b.webp" alt="Solidarité et sport à Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Famille</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/8eb0ada5-e860-4050-9973-07dbbaa6214b.webp" alt="Dépassement de soi au soccer" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Dépassement</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/903fbeff-f14b-4aa7-a0f9-bd34de6a2c7f.webp" alt="Intensité physique terrain de foot" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Intensité</span></div></div>
+            <div class="gallery-item h-2"><img src="./img/gallery/92283462-011c-42a5-b3a1-9995822354eb.webp" alt="Technique de jeu soccer Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Action</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/9861be5b-640b-40b1-b841-e55b12840cc2.webp" alt="Pratique sportive hebdomadaire" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Sport</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/a99e6772-7690-4b6d-b479-b97b5a6a7e34.webp" alt="Événements de saison Soccer Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Saison</span></div></div>
+            <div class="gallery-item w-2"><img src="./img/gallery/becf2aa4-bd7c-4e3a-bdce-46b85ba5ca16.webp" alt="Rencontre interculturelle par le sport" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Rencontre</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/c2040b73-79b3-4151-9137-04905ab697f8.webp" alt="L'art du football à Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Jeu</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/ca2ba63a-a696-4690-bb38-77101851195e.webp" alt="Collectif uni au Soccer Interculturel" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Équipe</span></div></div>
+            <div class="gallery-item h-2"><img src="./img/gallery/d91d5b7e-a618-4254-8b1b-0bf2f3c806a2.webp" alt="Passion dévorante pour le ballon rond" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Passion</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/d9fcfc58-9e07-4577-b7f2-68bd41c3d574.webp" alt="Compétition amicale Bellechasse" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Compétition</span></div></div>
+            <div class="gallery-item"><img src="./img/gallery/ea8ee5b8-5e1f-415a-bcaf-35cf007390fa.webp" alt="Identité visuelle club de soccer" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Club</span></div></div>
+            <div class="gallery-item w-2"><img src="./img/gallery/f04fa7e5-0800-4877-8ad5-32c21c90d7cb.webp" alt="Amitié et unité au terrain de soccer" width="600" height="800" loading="lazy"><div class="item-overlay"><span class="item-cat">Unité</span></div></div>
         </div>
     </section>
 
@@ -197,9 +273,9 @@
         <h2 class="section-title serif">Programme de la Saison</h2>
 
         <div class="program-tabs">
-            <button class="tab-btn" onclick="showSeason('all')">Toutes les Saisons</button>
-            <button class="tab-btn active" onclick="showSeason('ete')">Saison d'Été</button>
-            <button class="tab-btn" onclick="showSeason('hiver')">Saison d'Hiver</button>
+            <button class="tab-btn" onclick="showSeason('all')" aria-label="Afficher toutes les saisons">Toutes les Saisons</button>
+            <button class="tab-btn active" onclick="showSeason('ete')" aria-label="Afficher la saison d'été">Saison d'Été</button>
+            <button class="tab-btn" onclick="showSeason('hiver')" aria-label="Afficher la saison d'hiver">Saison d'Hiver</button>
         </div>
 
         <div id="ete" class="season-content active">
@@ -237,34 +313,63 @@
         </div>
     </section>
 
+    <!-- Section Partenaires -->
+    <section id="partners" class="partners-section">
+        <div class="partners-container">
+            <span class="section-subtitle center">Soutien & Confiance</span>
+            <h2 class="section-title serif">Nos Partenaires</h2>
+            <div class="partners-grid-scroll">
+                <div class="partners-track">
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+1" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+2" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+3" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+4" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+5" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+6" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <!-- Duplicate for infinite scroll effect -->
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+1" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+2" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/200x80/f9f9f9/999?text=PARTENAIRE+3" alt="Partenaire" width="200" height="80" loading="lazy"></div>
+                </div>
+            </div>
+            <p class="partner-cta">Vous souhaitez soutenir le club ? <a href="#contact">Contactez-nous</a></p>
+        </div>
+    </section>
+
     <!-- Step 4: Contact -->
     <section id="contact" class="contact-section">
         <h2 class="section-title serif">Contact & Invitations</h2>
         <div class="contact-container">
-            <form action="#" class="contact-form">
+            <form action="https://formsubmit.co/ajax/anjahnyonyliantsoa@gmail.com" method="POST" id="contact-form"
+                class="contact-form">
+                <!-- Config FormSubmit -->
+                <input type="hidden" name="_subject" value="Nouveau message de Soccer Bellechasse">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Votre Nom</label>
-                        <input type="text" id="name" placeholder="Ex: Jean Dupont" required>
+                        <input type="text" name="nom" id="name" placeholder="Ex: Jean Dupont" required>
                     </div>
                     <div class="form-group">
                         <label for="team">Votre Équipe (Optionnel)</label>
-                        <input type="text" id="team" placeholder="Ex: AS Saint-Anselme">
+                        <input type="text" name="equipe" id="team" placeholder="Ex: AS Saint-Anselme">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Adresse Courriel</label>
-                        <input type="email" id="email" placeholder="contact@votremail.com" required>
+                        <input type="email" name="email" id="email" placeholder="contact@votremail.com" required>
                     </div>
                     <div class="form-group">
                         <label for="date">Date souhaitée</label>
-                        <input type="text" id="date" placeholder="Ex: 15 Juin 2026">
+                        <input type="text" name="date" id="date" placeholder="Ex: 15 Juin 2026">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Votre Message</label>
-                    <textarea id="message"
+                    <textarea name="message" id="message"
                         placeholder="Dites-nous en plus sur votre projet de match ou votre demande..." rows="5"
                         required></textarea>
                 </div>
@@ -284,11 +389,12 @@
                 </div>
                 <div class="map-container">
                     <iframe src="https://maps.google.com/maps?q=Saint-Anselme,QC&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" title="Localisation du club Soccer Interculturel Bellechasse sur Google Maps"></iframe>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -298,20 +404,22 @@
                 <p>L'excellence dans la passion depuis 2020. Un club uni par l'amitié et le jeu.</p>
             </div>
             <div class="footer-links">
-                <h4>Navigation</h4>
+                <h3 class="footer-title">Navigation</h3>
                 <ul>
                     <li><a href="#hero">Accueil</a></li>
                     <li><a href="#histoire">Histoire</a></li>
                     <li><a href="#evenements">Événements</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#partners">Partenaires</a></li>
                     <li><a href="#programme">Programme</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Suivez-nous</h4>
+                <h3 class="footer-title">Suivez-nous</h3>
                 <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Suivre le club sur Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Suivre le club sur Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Suivre le club sur X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -320,6 +428,18 @@
             <p>Conçu par <a href="https://anjahnyony.com" target="_blank">anjahnyony.com</a></p>
         </div>
     </footer>
+
+    <!-- Popup de Confirmation -->
+    <div id="success-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="serif">Message Envoyé !</h3>
+            <p>Merci pour votre message. Toute l'équipe du Soccer Bellechasse vous reviendra très prochainement.</p>
+            <button type="button" class="btn-dark" onclick="closePopup()" aria-label="Fermer le message de confirmation">Continuer</button>
+        </div>
+    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -342,15 +462,15 @@
             }
         });
 
-        // Burger Menu Toggle
         const burger = document.getElementById('burger');
         const navLinks = document.querySelector('.nav-links');
         const menuOverlay = document.getElementById('menu-overlay');
 
         function toggleMenu() {
-            navLinks.classList.toggle('nav-active');
+            const isActive = navLinks.classList.toggle('nav-active');
             burger.classList.toggle('toggle');
             menuOverlay.classList.toggle('active');
+            burger.setAttribute('aria-expanded', isActive);
         }
 
         burger.addEventListener('click', toggleMenu);
@@ -381,6 +501,65 @@
             // Highlight active button
             event.currentTarget.classList.add('active');
         }
+
+        // Form Submission with AJAX
+        const contactForm = document.getElementById('contact-form');
+        const successPopup = document.getElementById('success-popup');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
+            // Loading state
+            submitBtn.innerHTML = '<span>Envoi en cours...</span>';
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.pointerEvents = 'none';
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        successPopup.classList.add('active');
+                        contactForm.reset();
+
+                        // Auto close after 3.5 seconds
+                        setTimeout(() => {
+                            closePopup();
+                        }, 1500);
+                    } else {
+                        alert('Une erreur est survenue. Veuillez réessayer.');
+                    }
+                })
+                .catch(error => {
+                    alert('Une erreur est survenue. Veuillez vérifier votre connexion.');
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.pointerEvents = 'auto';
+                });
+        });
+
+        function closePopup() {
+            successPopup.classList.remove('active');
+        }
+
+        // Accessibility: Keyboard support for burger menu
+        burger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
     </script>
 </body>
 
