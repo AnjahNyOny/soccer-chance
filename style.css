@@ -24,6 +24,27 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; /* Base size */
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 19px; /* Enhanced Desktop */
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    html {
+        font-size: 21px; /* 2K / High-res screens */
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    html {
+        font-size: 24px; /* 4k and Ultra-wide */
+    }
 }
 
 body {
@@ -32,6 +53,8 @@ body {
     font-family: var(--font-sans);
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
 }
 
 h1,
@@ -123,16 +146,23 @@ nav.scrolled {
 }
 
 .nav-links a {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
     opacity: 0.8;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
     opacity: 1;
     color: var(--accent-secondary);
+}
+
+/* Page Header for Subpages */
+.page-header {
+    background: var(--sep-color);
+    padding: 120px 7% 60px;
+    text-align: center;
 }
 
 /* Burger Menu */
@@ -194,7 +224,7 @@ nav.scrolled {
 }
 
 .hero-left h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     line-height: 1.1;
     margin-bottom: 2rem;
     color: var(--text-color);
@@ -202,10 +232,10 @@ nav.scrolled {
 }
 
 .hero-left p {
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
     color: #666;
     margin-bottom: 3rem;
-    max-width: 450px;
+    max-width: 550px;
     line-height: 1.8;
 }
 
@@ -275,8 +305,8 @@ section {
 }
 
 .section-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: clamp(2rem, 6vh, 4rem);
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    margin-bottom: clamp(2.5rem, 6vh, 5rem);
     text-align: center;
     position: relative;
 }
@@ -284,7 +314,7 @@ section {
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -15px;
+    /* bottom: -15px; */
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
@@ -302,8 +332,7 @@ section {
 
 .story-img-wrapper {
     position: relative;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .story-img-wrapper img {
@@ -320,39 +349,42 @@ section {
 }
 
 .founder-card {
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 180px;
-    background: white;
-    padding: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    background: var(--sep-color);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     box-shadow: var(--shadow-premium);
     z-index: 10;
     transition: var(--transition);
 }
 
 .founder-card:hover {
-    transform: translateY(-10px);
+    transform: translateX(10px);
 }
 
 .founder-img {
-    width: 100%;
-    height: 180px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     display: block;
-    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
 .founder-info {
-    text-align: center;
+    text-align: left;
 }
 
 .founder-name {
     font-family: var(--font-serif);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-color);
     display: block;
+    margin-bottom: 0.2rem;
 }
 
 .founder-title {
@@ -364,15 +396,16 @@ section {
 
 .since-badge {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: -20px;
+    right: -20px;
     background: var(--text-color);
     color: white;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     z-index: 2;
+    box-shadow: var(--shadow-premium);
 }
 
 .section-subtitle {
@@ -386,13 +419,13 @@ section {
 }
 
 .story-right h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 4vw, 4rem);
     margin-bottom: 2rem;
     line-height: 1.2;
 }
 
 .story-text p {
-    font-size: 1.05rem;
+    font-size: clamp(1.05rem, 1.2vw, 1.25rem);
     margin-bottom: 1.5rem;
     color: #666;
     line-height: 1.8;
@@ -421,7 +454,7 @@ section {
 }
 
 .highlight-item .label {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -489,7 +522,7 @@ section {
 }
 
 .event-tag {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     background: var(--accent-secondary);
@@ -499,7 +532,7 @@ section {
 }
 
 .event-date {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.8;
@@ -511,7 +544,7 @@ section {
 }
 
 .event-overlay p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.8;
     line-height: 1.4;
     max-width: 400px;
@@ -701,10 +734,10 @@ section {
 
 /* Calendar Section (Keep existing row layout) */
 .calendar-list {
-    max-width: 900px;
+    max-width: 70rem;
     margin: 0 auto;
     background: white;
-    padding: 0 2rem;
+    padding: 0 3rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
@@ -727,13 +760,16 @@ section {
     font-weight: 700;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    width: 150px;
+    width: auto;
+    min-width: 12rem;
+    padding-right: 1rem;
 }
 
 .match-location {
     flex: 1;
     color: #666;
     font-size: 0.95rem;
+    padding-right: 2rem;
 }
 
 .match-type {
@@ -743,7 +779,7 @@ section {
 }
 
 .badge {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 0.4rem 1rem;
@@ -856,9 +892,9 @@ section {
 /* Contact Section */
 .contact-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 5rem;
-    max-width: 1100px;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 6rem;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
@@ -871,7 +907,7 @@ section {
 .form-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .form-group {
@@ -882,7 +918,7 @@ section {
 }
 
 .form-group label {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
@@ -1010,7 +1046,7 @@ textarea::placeholder {
 
 .footer-title {
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     letter-spacing: 2px;
     color: var(--accent-secondary);
     margin-bottom: 2rem;
@@ -1064,7 +1100,7 @@ textarea::placeholder {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     opacity: 0.5;
 }
 
@@ -1364,4 +1400,61 @@ textarea::placeholder {
     .popup-content {
         padding: 2.5rem 1.5rem;
     }
+}
+
+/* Lightbox Premium */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85vh;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.lightbox-close:hover {
+    background: var(--accent-secondary);
+    transform: rotate(90deg);
 }
