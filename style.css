@@ -224,7 +224,7 @@ nav.scrolled {
 }
 
 .hero-left h1 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.1;
     margin-bottom: 2rem;
     color: var(--text-color);
@@ -232,7 +232,7 @@ nav.scrolled {
 }
 
 .hero-left p {
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
     color: #666;
     margin-bottom: 3rem;
     max-width: 550px;
@@ -305,8 +305,8 @@ section {
 }
 
 .section-title {
-    font-size: clamp(2.2rem, 5vw, 4.5rem);
-    margin-bottom: clamp(2.5rem, 6vh, 5rem);
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    margin-bottom: clamp(2.5rem, 6vh, 4rem);
     text-align: center;
     position: relative;
 }
@@ -419,13 +419,13 @@ section {
 }
 
 .story-right h2 {
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
     margin-bottom: 2rem;
     line-height: 1.2;
 }
 
 .story-text p {
-    font-size: clamp(1.05rem, 1.2vw, 1.25rem);
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.1rem);
     margin-bottom: 1.5rem;
     color: #666;
     line-height: 1.8;
