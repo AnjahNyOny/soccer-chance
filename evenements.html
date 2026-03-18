@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements | Soccer Interculturel Bellechasse</title>
+    <meta name="description" content="Découvrez les événements et la vie du club Soccer Interculturel Bellechasse. Matchs, tournois et rencontres communautaires.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon-removebg-preview.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="scrolled"> <!-- Always scrolled style on subpages for readability -->
+        <div class="logo">Soccer Interculturel <span class="logo-accent">Bellechasse</span></div>
+        <div class="burger" id="burger" role="button" aria-label="Menu de navigation" aria-expanded="false" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#histoire">Notre Histoire</a></li>
+            <li><a href="evenements.html" class="active">Événements</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="index.html#partners">Partenaires</a></li>
+            <li><a href="index.html#programme">Programmes</a></li>
+            <li><a href="index.html#contact">Nous contacter</a></li>
+            <li class="mobile-socials">
+                <a href="https://www.facebook.com/share/g/1BbeRjiNof/?mibextid=wwXIfr" aria-label="Facebook du club" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://chat.whatsapp.com/ITBcCczR1BU3wg0SWKI2sk?mode=gi_t" aria-label="WhatsApp du club" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <!-- Page Header -->
+        <header class="page-header" style="text-align: center; padding: 60px 7% 20px;">
+            <span class="section-subtitle center">Vie du Club</span>
+            <h1 class="section-title serif">Nos Événements</h1>
+            <p class="section-description" style="margin: 0 auto 40px; max-width: 700px;">Découvrez les moments forts qui font vibrer notre communauté, des entraînements réguliers aux tournois mémorables.</p>
+        </header>
+
+        <!-- Section Événements -->
+        <section id="evenements" class="events-section" style="padding-top: 20px;">
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="./img/evenement/IMG_1171.webp" alt="Entraînement au gymnase" width="400" height="267" loading="lazy">
+                        <div class="event-overlay">
+                            <div class="event-meta">
+                                <span class="event-tag">Extérieur</span>
+                                <span class="event-date">Été</span>
+                            </div>
+                            <h3 class="serif">Pratique Extérieure</h3>
+                            <p>Nos séances d'entraînement intensives à l'extérieur pour garder le rythme durant la saison estivale.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="./img/evenement/IMG_0566.webp" alt="Tournoi local" width="400" height="267" loading="lazy">
+                        <div class="event-overlay">
+                            <div class="event-meta">
+                                <span class="event-tag">Compétition</span>
+                                <span class="event-date">Été</span>
+                            </div>
+                            <h3 class="serif">Matchs de Championnat</h3>
+                            <p>L'adrénaline de la compétition sur les terrains de Saint-Anselme face aux meilleures équipes locales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="./img/evenement/IMG_3381.webp" alt="Esprit d'équipe" width="400" height="267" loading="lazy">
+                        <div class="event-overlay">
+                            <div class="event-meta">
+                                <span class="event-tag">Camaraderie</span>
+                                <span class="event-date">Toute l'année</span>
+                            </div>
+                            <h3 class="serif">Force du Collectif</h3>
+                            <p>Bien plus que du sport, c'est une histoire d'amitié qui se forge à chaque rencontre sur le terrain.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="./img/evenement/CENU7380.webp" alt="Match amical en extérieur" width="400" height="267" loading="lazy">
+                        <div class="event-overlay">
+                            <div class="event-meta">
+                                <span class="event-tag">Dépassement</span>
+                                <span class="event-date">Saison Régulière</span>
+                            </div>
+                            <h3 class="serif">Passion Extérieure</h3>
+                            <p>Le plaisir de jouer sous le soleil et de performer ensemble pour les couleurs de Bellechasse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">Soccer Interculturel <span class="logo-accent">Bellechasse</span></div>
+                <p>Le plaisir de vivre ensemble et l'union par le sport depuis 2019</p>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-title">Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#histoire">Histoire</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="index.html#partners">Partenaires</a></li>
+                    <li><a href="index.html#programme">Programme</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3 class="footer-title">Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/g/1BbeRjiNof/?mibextid=wwXIfr" aria-label="Suivre le club sur Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://chat.whatsapp.com/ITBcCczR1BU3wg0SWKI2sk?mode=gi_t" aria-label="Suivre le club sur WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Soccer Interculturel Bellechasse. Tous droits réservés.</p>
+            <p>Conçu par <a href="https://anjahnyony.com" target="_blank">anjahnyony.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            const isActive = navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            menuOverlay.classList.toggle('active');
+            burger.setAttribute('aria-expanded', isActive);
+        }
+
+        burger.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        // Accessibility: Keyboard support for burger menu
+        burger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>
